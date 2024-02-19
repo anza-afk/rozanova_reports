@@ -1,16 +1,14 @@
 from django.contrib import admin
 
-from subdivisions.models import Subdivision
+from subdivisions.models import APPSubdivision
 
 
-@admin.register(Subdivision)
-class SubdivisionAdmin(admin.ModelAdmin):
+@admin.register(APPSubdivision)
+class APPSubdivision(admin.ModelAdmin):
     list_display = (
         'id',
-        'type',
         'title'
     )
     fields = (
-        'type',
-        'title'
+        'title',
     )
